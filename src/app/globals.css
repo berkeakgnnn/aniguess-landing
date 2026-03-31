@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
+/* ---- Design tokens ---- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base: #0d0820;
+  --bg-card: #110c22;
+  --bg-footer: #0a0618;
+  --color-primary: #7c3aed;
+  --color-primary-glow: #a78bfa;
+  --color-gold: #fbbf24;
+  --color-gold-alt: #f59e0b;
+  --color-text: #f1f5f9;
+  --color-muted: #64748b;
+  --color-success: #22c55e;
+  --color-border: #1e1b2e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-exo2);
+  --color-background: var(--bg-base);
+  --color-foreground: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---- Base reset / global ---- */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--color-text);
+  font-family: var(--font-exo2), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Keyframe animations ---- */
+
+/* Slow floating for hero orbs */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-24px) scale(1.04); }
+}
+
+/* Faster float variation */
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-16px) rotate(3deg); }
+  66%       { transform: translateY(-8px) rotate(-2deg); }
+}
+
+/* Particle drift */
+@keyframes particle-drift {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-120vh) translateX(40px) scale(0.5); opacity: 0; }
+}
+
+/* Glow pulse for legendary card */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 12px 2px rgba(245, 158, 11, 0.5),
+      0 0 40px 8px rgba(245, 158, 11, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 24px 6px rgba(245, 158, 11, 0.8),
+      0 0 70px 16px rgba(245, 158, 11, 0.4);
+  }
+}
+
+/* Subtle shimmer sweep across cards */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Fade-in up for section content */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Number count pop */
+@keyframes pop-in {
+  0%   { opacity: 0; transform: scale(0.8); }
+  70%  { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ---- Utility animation classes ---- */
+.animate-float-slow   { animation: float-slow   6s ease-in-out infinite; }
+.animate-float-medium { animation: float-medium 4.5s ease-in-out infinite; }
+.animate-float-alt    { animation: float-slow   8s ease-in-out infinite reverse; }
+.animate-glow-pulse   { animation: glow-pulse   2.4s ease-in-out infinite; }
+.animate-fade-up      { animation: fade-up      0.7s ease-out both; }
+.animate-pop-in       { animation: pop-in       0.5s ease-out both; }
+
+/* Staggered delay helpers */
+.delay-100  { animation-delay: 100ms; }
+.delay-200  { animation-delay: 200ms; }
+.delay-300  { animation-delay: 300ms; }
+.delay-400  { animation-delay: 400ms; }
+.delay-500  { animation-delay: 500ms; }
+.delay-600  { animation-delay: 600ms; }
+.delay-700  { animation-delay: 700ms; }
+
+/* ---- Particle field ---- */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-drift linear infinite;
+  opacity: 0;
+}
+
+/* Individual particles with varied sizes, positions, durations */
+.particle:nth-child(1)  { width: 3px;  height: 3px;  left: 8%;  bottom: 0; background: #a78bfa; animation-duration: 9s;  animation-delay: 0s;    }
+.particle:nth-child(2)  { width: 2px;  height: 2px;  left: 18%; bottom: 0; background: #7c3aed; animation-duration: 11s; animation-delay: 1.5s;  }
+.particle:nth-child(3)  { width: 4px;  height: 4px;  left: 28%; bottom: 0; background: #fbbf24; animation-duration: 7s;  animation-delay: 3s;    }
+.particle:nth-child(4)  { width: 2px;  height: 2px;  left: 40%; bottom: 0; background: #a78bfa; animation-duration: 13s; animation-delay: 0.5s;  }
+.particle:nth-child(5)  { width: 3px;  height: 3px;  left: 52%; bottom: 0; background: #22c55e; animation-duration: 10s; animation-delay: 2s;    }
+.particle:nth-child(6)  { width: 2px;  height: 2px;  left: 63%; bottom: 0; background: #7c3aed; animation-duration: 8s;  animation-delay: 4s;    }
+.particle:nth-child(7)  { width: 4px;  height: 4px;  left: 74%; bottom: 0; background: #a78bfa; animation-duration: 12s; animation-delay: 1s;    }
+.particle:nth-child(8)  { width: 2px;  height: 2px;  left: 85%; bottom: 0; background: #fbbf24; animation-duration: 9s;  animation-delay: 3.5s;  }
+.particle:nth-child(9)  { width: 3px;  height: 3px;  left: 93%; bottom: 0; background: #a78bfa; animation-duration: 11s; animation-delay: 2.5s;  }
+.particle:nth-child(10) { width: 2px;  height: 2px;  left: 46%; bottom: 0; background: #7c3aed; animation-duration: 14s; animation-delay: 0.8s;  }
+.particle:nth-child(11) { width: 3px;  height: 3px;  left: 12%; bottom: 0; background: #fbbf24; animation-duration: 8s;  animation-delay: 5s;    }
+.particle:nth-child(12) { width: 2px;  height: 2px;  left: 57%; bottom: 0; background: #22c55e; animation-duration: 10s; animation-delay: 6s;    }
+
+/* ---- Card hover effects ---- */
+.feature-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.feature-card:hover {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 28px rgba(124, 58, 237, 0.2);
+  transform: translateY(-4px);
+}
+
+/* ---- Rarity card frames ---- */
+.card-common {
+  border: 2px solid #64748b;
+  box-shadow: 0 0 6px rgba(100, 116, 139, 0.2);
+}
+.card-rare {
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.15);
+}
+.card-legendary {
+  border: 2px solid #f59e0b;
+}
+
+/* ---- Logo glow text ---- */
+.logo-glow {
+  text-shadow:
+    0 0 20px rgba(167, 139, 250, 0.6),
+    0 0 60px rgba(124, 58, 237, 0.4),
+    0 0 100px rgba(124, 58, 237, 0.2);
+}
+
+/* ---- CTA button ---- */
+.btn-primary {
+  background: var(--color-primary);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  background: #6d28d9;
+  box-shadow: 0 0 24px rgba(124, 58, 237, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-primary);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.btn-outline:hover {
+  background: rgba(124, 58, 237, 0.12);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ---- Shimmer line used in section headings ---- */
+.heading-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-glow) 0%,
+    #fff 50%,
+    var(--color-primary-glow) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
 }
