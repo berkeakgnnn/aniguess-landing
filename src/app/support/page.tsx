@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support — AniGuess",
-  description: "Get help with AniGuess — Anime Character Guessing Game",
+  title: "Support — AniMyst",
+  description: "Get help with AniMyst — Anime Character Guessing Game",
 };
 
-const CONTACT_EMAIL = "support@aniguess.app";
+const CONTACT_EMAIL = "support@animyst.app";
 
 interface FaqItem {
   question: string;
@@ -14,7 +14,7 @@ interface FaqItem {
 
 const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "How do I play AniGuess?",
+    question: "How do I play AniMyst?",
     answer:
       "Select an anime mode (or Daily Challenge) from the home screen. You will be shown a blurred image of an anime character. Choose the correct character name from the options provided. The faster you guess — and the less you unblur — the more runes you earn.",
   },
@@ -36,12 +36,12 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How do I turn off ads or personalised advertising?",
     answer:
-      "You can opt out of personalised ads at any time by going to your iPhone Settings → Privacy & Security → Tracking and disabling tracking for AniGuess. You will continue to see ads, but they will not be personalised based on your behaviour. We do not currently offer an ad-free paid tier.",
+      "You can opt out of personalised ads at any time by going to your iPhone Settings → Privacy & Security → Tracking and disabling tracking for AniMyst. You will continue to see ads, but they will not be personalised based on your behaviour. We do not currently offer an ad-free paid tier.",
   },
   {
     question: "Which anime series are included?",
     answer:
-      "AniGuess currently features 22 anime series including Naruto, Demon Slayer, Dragon Ball Z, One Piece, Attack on Titan, My Hero Academia, Bleach, Death Note, Fullmetal Alchemist, Hunter x Hunter, Tokyo Ghoul, Sword Art Online, Re:Zero, Jujutsu Kaisen, Black Clover, Chainsaw Man, Spy x Family, Vinland Saga, Mob Psycho 100, Blue Exorcist, Overlord, and No Game No Life. More series will be added in future updates.",
+      "AniMyst currently features 22 anime series including Naruto, Demon Slayer, Dragon Ball Z, One Piece, Attack on Titan, My Hero Academia, Bleach, Death Note, Fullmetal Alchemist, Hunter x Hunter, Tokyo Ghoul, Sword Art Online, Re:Zero, Jujutsu Kaisen, Black Clover, Chainsaw Man, Spy x Family, Vinland Saga, Mob Psycho 100, Blue Exorcist, Overlord, and No Game No Life. More series will be added in future updates.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function SupportPage(): React.ReactElement {
             className="text-xl font-black tracking-tight transition-colors hover:text-[#a78bfa]"
             style={{ color: "#f1f5f9" }}
           >
-            AniGuess
+            AniMyst
           </a>
           <a
             href="/"
@@ -202,7 +202,7 @@ export default function SupportPage(): React.ReactElement {
             </a>
           </nav>
           <p className="text-xs" style={{ color: "#64748b" }}>
-            &copy; 2026 AniGuess. All rights reserved.
+            &copy; 2026 AniMyst. All rights reserved.
           </p>
         </div>
       </footer>

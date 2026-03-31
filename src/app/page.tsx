@@ -1,4 +1,4 @@
-// AniGuess landing page — all sections in one file, CSS animations only
+// AniMyst landing page — all sections in one file, CSS animations only
 
 // ---------- Inline SVG icons ----------
 
@@ -150,7 +150,7 @@ function HeroSection(): React.ReactElement {
           className="animate-fade-up text-sm font-bold tracking-[0.3em] uppercase"
           style={{ color: "#a78bfa" }}
         >
-          アニゲス
+          アニミスト
         </p>
 
         {/* Logo */}
@@ -158,7 +158,7 @@ function HeroSection(): React.ReactElement {
           className="animate-fade-up delay-100 logo-glow select-none font-black leading-none tracking-tight"
           style={{ fontSize: "clamp(3rem, 10vw, 5rem)", color: "#f1f5f9" }}
         >
-          AniGuess
+          AniMyst
         </h1>
 
         {/* Tagline */}
@@ -175,7 +175,7 @@ function HeroSection(): React.ReactElement {
           <a
             href="#"
             className="btn-primary flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base font-bold text-white"
-            aria-label="Download AniGuess on the App Store"
+            aria-label="Download AniMyst on the App Store"
           >
             <IconApple />
             Download on App Store
@@ -577,7 +577,7 @@ function Footer(): React.ReactElement {
           className="text-2xl font-black tracking-tight"
           style={{ color: "#a78bfa" }}
         >
-          AniGuess
+          AniMyst
         </p>
         <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer">
           <a
@@ -602,7 +602,7 @@ function Footer(): React.ReactElement {
             Support
           </a>
           <a
-            href="mailto:support@aniguess.app"
+            href="mailto:support@animyst.app"
             className="text-sm transition-colors hover:text-[#a78bfa]"
             style={{ color: "#64748b" }}
           >
@@ -610,7 +610,7 @@ function Footer(): React.ReactElement {
           </a>
         </nav>
         <p className="text-xs" style={{ color: "#64748b" }}>
-          &copy; 2026 AniGuess. All rights reserved.
+          &copy; 2026 AniMyst. All rights reserved.
         </p>
       </div>
     </footer>

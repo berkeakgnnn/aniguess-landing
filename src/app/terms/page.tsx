@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — AniGuess",
-  description: "Terms of Service for AniGuess — Anime Character Guessing Game",
+  title: "Terms of Service — AniMyst",
+  description: "Terms of Service for AniMyst — Anime Character Guessing Game",
 };
 
 const EFFECTIVE_DATE = "March 31, 2026";
-const CONTACT_EMAIL = "support@aniguess.app";
+const CONTACT_EMAIL = "support@animyst.app";
 
 // Shared prose block for terms sections
 function TermsSection({
@@ -48,7 +48,7 @@ export default function TermsPage(): React.ReactElement {
             className="text-xl font-black tracking-tight transition-colors hover:text-[#a78bfa]"
             style={{ color: "#f1f5f9" }}
           >
-            AniGuess
+            AniMyst
           </a>
           <a
             href="/"
@@ -77,12 +77,12 @@ export default function TermsPage(): React.ReactElement {
         <div className="flex flex-col gap-10">
           <TermsSection title="Acceptance of Terms">
             <p>
-              By downloading, installing, or using AniGuess (&ldquo;App&rdquo;), you agree
+              By downloading, installing, or using AniMyst (&ldquo;App&rdquo;), you agree
               to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do not
               agree to these Terms, do not use the App.
             </p>
             <p>
-              These Terms apply to all users of AniGuess, including users who make
+              These Terms apply to all users of AniMyst, including users who make
               in-app purchases. We may update these Terms at any time; continued use of
               the App after changes are posted constitutes your acceptance of the
               updated Terms.
@@ -91,7 +91,7 @@ export default function TermsPage(): React.ReactElement {
 
           <TermsSection title="App Usage">
             <p>
-              AniGuess is a mobile game in which players identify anime characters from
+              AniMyst is a mobile game in which players identify anime characters from
               progressively unblurred images, collect character cards, and participate in
               daily challenges. The App is available on iOS and is free to download.
             </p>
@@ -107,12 +107,12 @@ export default function TermsPage(): React.ReactElement {
 
           <TermsSection title="In-App Purchases">
             <p>
-              AniGuess offers the following optional in-app purchases through the Apple
+              AniMyst offers the following optional in-app purchases through the Apple
               App Store:
             </p>
             <ul className="list-disc pl-6">
               <li>
-                <strong style={{ color: "#f1f5f9" }}>AniGuess Premium</strong> — Auto-renewing
+                <strong style={{ color: "#f1f5f9" }}>AniMyst Premium</strong> — Auto-renewing
                 monthly subscription at $2.99/month. Provides premium benefits including
                 enhanced gameplay features.
               </li>
@@ -146,7 +146,7 @@ export default function TermsPage(): React.ReactElement {
           <TermsSection title="Subscription Terms">
             {/* Required Apple auto-renewing subscription disclosures */}
             <p>
-              The AniGuess Premium subscription is an auto-renewing subscription. The
+              The AniMyst Premium subscription is an auto-renewing subscription. The
               following terms apply:
             </p>
             <ul className="list-disc pl-6">
@@ -182,7 +182,7 @@ export default function TermsPage(): React.ReactElement {
 
           <TermsSection title="Virtual Currency (Runes)">
             <p>
-              Runes are a virtual in-game currency used to open card packs within AniGuess.
+              Runes are a virtual in-game currency used to open card packs within AniMyst.
               By purchasing Rune bundles or earning Runes through gameplay, you acknowledge
               that:
             </p>
@@ -205,7 +205,7 @@ export default function TermsPage(): React.ReactElement {
 
           <TermsSection title="Card Collection">
             <p>
-              Character cards collected within AniGuess are virtual items that exist solely
+              Character cards collected within AniMyst are virtual items that exist solely
               within the App. You acknowledge that:
             </p>
             <ul className="list-disc pl-6">
@@ -236,14 +236,14 @@ export default function TermsPage(): React.ReactElement {
 
           <TermsSection title="Intellectual Property">
             <p>
-              AniGuess and its original content, features, and functionality are the
+              AniMyst and its original content, features, and functionality are the
               property of the App&apos;s developer and are protected by applicable copyright
               and intellectual property laws.
             </p>
             <p>
               Anime characters, names, images, and related intellectual property featured
-              in AniGuess belong to their respective copyright holders (including but not
-              limited to their original creators, studios, and publishers). AniGuess makes
+              in AniMyst belong to their respective copyright holders (including but not
+              limited to their original creators, studios, and publishers). AniMyst makes
               no claim of ownership over these characters or their associated intellectual
               property.
             </p>
@@ -360,7 +360,7 @@ export default function TermsPage(): React.ReactElement {
             </a>
           </nav>
           <p className="text-xs" style={{ color: "#64748b" }}>
-            &copy; 2026 AniGuess. All rights reserved.
+            &copy; 2026 AniMyst. All rights reserved.
           </p>
         </div>
       </footer>

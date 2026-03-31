@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — AniGuess",
-  description: "Privacy Policy for AniGuess — Anime Character Guessing Game",
+  title: "Privacy Policy — AniMyst",
+  description: "Privacy Policy for AniMyst — Anime Character Guessing Game",
 };
 
 const LAST_UPDATED = "March 31, 2026";
-const CONTACT_EMAIL = "support@aniguess.app";
+const CONTACT_EMAIL = "support@animyst.app";
 
 // Shared prose block for policy sections
 function PolicySection({
@@ -48,7 +48,7 @@ export default function PrivacyPage(): React.ReactElement {
             className="text-xl font-black tracking-tight transition-colors hover:text-[#a78bfa]"
             style={{ color: "#f1f5f9" }}
           >
-            AniGuess
+            AniMyst
           </a>
           <a
             href="/"
@@ -77,13 +77,13 @@ export default function PrivacyPage(): React.ReactElement {
         <div className="flex flex-col gap-10">
           <PolicySection title="Introduction">
             <p>
-              AniGuess (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is
+              AniMyst (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is
               committed to protecting your privacy. This Privacy Policy explains how we
-              handle information when you use the AniGuess mobile application
+              handle information when you use the AniMyst mobile application
               (&ldquo;App&rdquo;) available on iOS.
             </p>
             <p>
-              By downloading or using AniGuess, you agree to the practices described in
+              By downloading or using AniMyst, you agree to the practices described in
               this policy. If you do not agree, please do not use the App.
             </p>
           </PolicySection>
@@ -91,10 +91,10 @@ export default function PrivacyPage(): React.ReactElement {
           <PolicySection title="Information We Collect">
             <p>
               <strong style={{ color: "#f1f5f9" }}>
-                AniGuess does not collect any personally identifiable information (PII).
+                AniMyst does not collect any personally identifiable information (PII).
               </strong>{" "}
               There is no account system, no login, and no registration required. You can
-              play AniGuess completely anonymously.
+              play AniMyst completely anonymously.
             </p>
             <p>We do not collect:</p>
             <ul className="list-disc pl-6">
@@ -137,7 +137,7 @@ export default function PrivacyPage(): React.ReactElement {
 
           <PolicySection title="Advertising (Google AdMob)">
             <p>
-              AniGuess uses Google AdMob to display advertisements. AdMob may collect
+              AniMyst uses Google AdMob to display advertisements. AdMob may collect
               and use certain information about your device and ad interactions to serve
               relevant ads. This may include:
             </p>
@@ -168,7 +168,7 @@ export default function PrivacyPage(): React.ReactElement {
               advertising identifier (IDFA) for personalised advertising purposes.
             </p>
             <p>
-              If you decline tracking permission, AniGuess will still function fully. You
+              If you decline tracking permission, AniMyst will still function fully. You
               will simply receive non-personalised advertisements. You can change your
               tracking preference at any time via{" "}
               <strong style={{ color: "#f1f5f9" }}>
@@ -180,7 +180,7 @@ export default function PrivacyPage(): React.ReactElement {
 
           <PolicySection title="GDPR (European Users)">
             <p>
-              Because AniGuess does not collect personal data, the majority of GDPR
+              Because AniMyst does not collect personal data, the majority of GDPR
               obligations do not apply. However, we respect the principles of data
               minimisation and transparency. If you are located in the European Economic
               Area (EEA), you have the right to:
@@ -205,7 +205,7 @@ export default function PrivacyPage(): React.ReactElement {
 
           <PolicySection title="KVKK (Turkish Users)">
             <p>
-              AniGuess, Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kişisel
+              AniMyst, Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kişisel
               veri işlememektedir. Uygulama içinde hiçbir hesap sistemi veya kayıt
               gerektiren işlem bulunmamaktadır. Reklam gösterimi amacıyla Google AdMob
               tarafından cihaz tanımlayıcı bilgileri kullanılabilir; bu işlem KVKK
@@ -226,7 +226,7 @@ export default function PrivacyPage(): React.ReactElement {
 
           <PolicySection title="Children's Privacy">
             <p>
-              AniGuess is intended for users of all ages, including children under 13.
+              AniMyst is intended for users of all ages, including children under 13.
               We do not knowingly collect personal information from children. Because the
               App does not collect any PII from any user, it is compliant with the
               Children&apos;s Online Privacy Protection Act (COPPA).
@@ -295,7 +295,7 @@ export default function PrivacyPage(): React.ReactElement {
             </a>
           </nav>
           <p className="text-xs" style={{ color: "#64748b" }}>
-            &copy; 2026 AniGuess. All rights reserved.
+            &copy; 2026 AniMyst. All rights reserved.
           </p>
         </div>
       </footer>

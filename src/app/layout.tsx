@@ -11,7 +11,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "AniGuess — Anime Character Guessing Game",
+  title: "AniMyst — Anime Character Guessing Game",
   description:
     "Guess anime characters from blurred images across 22 series. Collect 440 cards, open packs, and challenge yourself daily. Available on iOS.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "anime quiz",
   ],
   openGraph: {
-    title: "AniGuess — Anime Character Guessing Game",
+    title: "AniMyst — Anime Character Guessing Game",
     description:
       "Guess anime characters from blurred images across 22 series. Collect 440 cards, open packs, and challenge yourself daily.",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AniGuess — Anime Character Guessing Game",
+    title: "AniMyst — Anime Character Guessing Game",
     description:
       "Guess anime characters from blurred images across 22 series. Collect 440 cards and challenge yourself daily.",
   },
