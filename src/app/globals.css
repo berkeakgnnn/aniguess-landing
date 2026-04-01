@@ -471,6 +471,49 @@ body {
 
 .marquee-track {
   display: flex;
+  overflow: hidden;
   white-space: nowrap;
   will-change: transform;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.marquee-content span {
+  font-family: var(--font-exo2), system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: rgba(124, 58, 237, 0.12);
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+/* Gold shimmer text */
+.gold-shimmer {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24, #fef08a, #fbbf24, #f59e0b);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+/* Scroll indicator dot */
+.scroll-dot {
+  animation: float-medium 1.5s ease-in-out infinite;
+}
+
+/* Glow accent line at top of glass cards */
+.glow-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+  opacity: 0.5;
 }

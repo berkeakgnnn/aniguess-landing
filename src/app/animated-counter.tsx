@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface AnimatedCounterProps {
+export interface AnimatedCounterProps {
   target: number;
   suffix?: string;
   duration?: number;
+  className?: string;
 }
 
 function easeOutCubic(t: number): number {
@@ -16,6 +17,7 @@ export function AnimatedCounter({
   target,
   suffix = "",
   duration = 1500,
+  className = "",
 }: AnimatedCounterProps): React.ReactElement {
   const [count, setCount] = useState<number>(0);
   const [hasStarted, setHasStarted] = useState<boolean>(false);
@@ -70,7 +72,7 @@ export function AnimatedCounter({
   }, [hasStarted, target, duration]);
 
   return (
-    <span ref={containerRef}>
+    <span ref={containerRef} className={className}>
       {count}
       {suffix}
     </span>
