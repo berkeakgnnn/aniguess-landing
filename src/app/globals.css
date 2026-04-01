@@ -9,6 +9,8 @@
   --color-primary-glow: #a78bfa;
   --color-gold: #fbbf24;
   --color-gold-alt: #f59e0b;
+  --color-pink: #e879f9;
+  --color-teal: #06b6d4;
   --color-text: #f1f5f9;
   --color-muted: #64748b;
   --color-success: #22c55e;
@@ -91,6 +93,54 @@ body {
   100% { opacity: 1; transform: scale(1); }
 }
 
+/* Infinite horizontal marquee — row 1 goes left */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Row 2 reverses direction */
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* 3D diamond rotation */
+@keyframes rotate-diamond {
+  0%   { transform: rotateY(0deg) rotateZ(45deg); }
+  100% { transform: rotateY(360deg) rotateZ(45deg); }
+}
+
+/* Animated glowing divider line */
+@keyframes glow-line {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Subtle card tilt loop (CSS-only, no JS needed) */
+@keyframes tilt-card {
+  0%, 100% { transform: perspective(1000px) rotateY(0deg); }
+  50%       { transform: perspective(1000px) rotateY(3deg); }
+}
+
+/* Blinking cursor for typing effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Sparkle pulse overlay for legendary cards */
+@keyframes sparkle-pulse {
+  0%, 100% { opacity: 0.0; transform: scale(1); }
+  50%       { opacity: 0.25; transform: scale(1.05); }
+}
+
+/* Gold shimmer for step numbers */
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 /* ---- Utility animation classes ---- */
 .animate-float-slow   { animation: float-slow   6s ease-in-out infinite; }
 .animate-float-medium { animation: float-medium 4.5s ease-in-out infinite; }
@@ -98,6 +148,9 @@ body {
 .animate-glow-pulse   { animation: glow-pulse   2.4s ease-in-out infinite; }
 .animate-fade-up      { animation: fade-up      0.7s ease-out both; }
 .animate-pop-in       { animation: pop-in       0.5s ease-out both; }
+.animate-marquee      { animation: marquee 30s linear infinite; }
+.animate-marquee-rev  { animation: marquee-reverse 30s linear infinite; }
+.animate-tilt-card    { animation: tilt-card 5s ease-in-out infinite; }
 
 /* Staggered delay helpers */
 .delay-100  { animation-delay: 100ms; }
@@ -124,7 +177,7 @@ body {
   opacity: 0;
 }
 
-/* Individual particles with varied sizes, positions, durations */
+/* 18 particles with varied colors including pink and teal */
 .particle:nth-child(1)  { width: 3px;  height: 3px;  left: 8%;  bottom: 0; background: #a78bfa; animation-duration: 9s;  animation-delay: 0s;    }
 .particle:nth-child(2)  { width: 2px;  height: 2px;  left: 18%; bottom: 0; background: #7c3aed; animation-duration: 11s; animation-delay: 1.5s;  }
 .particle:nth-child(3)  { width: 4px;  height: 4px;  left: 28%; bottom: 0; background: #fbbf24; animation-duration: 7s;  animation-delay: 3s;    }
@@ -137,28 +190,132 @@ body {
 .particle:nth-child(10) { width: 2px;  height: 2px;  left: 46%; bottom: 0; background: #7c3aed; animation-duration: 14s; animation-delay: 0.8s;  }
 .particle:nth-child(11) { width: 3px;  height: 3px;  left: 12%; bottom: 0; background: #fbbf24; animation-duration: 8s;  animation-delay: 5s;    }
 .particle:nth-child(12) { width: 2px;  height: 2px;  left: 57%; bottom: 0; background: #22c55e; animation-duration: 10s; animation-delay: 6s;    }
+/* 6 new particles — pink and teal */
+.particle:nth-child(13) { width: 3px;  height: 3px;  left: 22%; bottom: 0; background: #e879f9; animation-duration: 9.5s; animation-delay: 1.2s; }
+.particle:nth-child(14) { width: 2px;  height: 2px;  left: 35%; bottom: 0; background: #06b6d4; animation-duration: 12s;  animation-delay: 2.8s; }
+.particle:nth-child(15) { width: 4px;  height: 4px;  left: 67%; bottom: 0; background: #e879f9; animation-duration: 7.5s; animation-delay: 4.5s; }
+.particle:nth-child(16) { width: 2px;  height: 2px;  left: 78%; bottom: 0; background: #06b6d4; animation-duration: 11s;  animation-delay: 0.3s; }
+.particle:nth-child(17) { width: 3px;  height: 3px;  left: 5%;  bottom: 0; background: #e879f9; animation-duration: 13s;  animation-delay: 3.7s; }
+.particle:nth-child(18) { width: 2px;  height: 2px;  left: 90%; bottom: 0; background: #06b6d4; animation-duration: 8.5s; animation-delay: 5.5s; }
+
+/* ---- Hero grid pattern overlay ---- */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 79px,
+      rgba(124, 58, 237, 0.04) 80px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 79px,
+      rgba(124, 58, 237, 0.04) 80px
+    );
+}
+
+/* ---- 3D Diamond ---- */
+.diamond-3d {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #7c3aed;
+  background: transparent;
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.5),
+    inset 0 0 20px rgba(124, 58, 237, 0.1);
+  animation: rotate-diamond 6s linear infinite;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateZ(45deg);
+}
+
+/* ---- Typing cursor ---- */
+.typing-cursor::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  color: #a78bfa;
+  margin-left: 2px;
+  font-weight: 400;
+}
 
 /* ---- Card hover effects ---- */
 .feature-card {
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Top glow accent line on feature cards */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7c3aed, transparent);
+  opacity: 0.6;
+}
+
 .feature-card:hover {
   border-color: var(--color-primary) !important;
-  box-shadow: 0 0 28px rgba(124, 58, 237, 0.2);
-  transform: translateY(-4px);
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.25);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 /* ---- Rarity card frames ---- */
 .card-common {
   border: 2px solid #64748b;
   box-shadow: 0 0 6px rgba(100, 116, 139, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card-common:hover {
+  transform: perspective(800px) rotateY(2deg) rotateX(1deg) translateY(-4px);
+  box-shadow: 0 8px 24px rgba(100, 116, 139, 0.3);
+}
+
 .card-rare {
   border: 2px solid #8b5cf6;
   box-shadow: 0 0 16px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card-rare:hover {
+  transform: perspective(800px) rotateY(4deg) rotateX(2deg) translateY(-6px);
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.3);
+}
+
 .card-legendary {
   border: 2px solid #f59e0b;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sparkle overlay for legendary */
+.card-legendary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(251, 191, 36, 0.3), transparent 60%);
+  pointer-events: none;
+  animation: sparkle-pulse 2s ease-in-out infinite;
+}
+
+.card-legendary:hover {
+  transform: perspective(800px) rotateY(5deg) rotateX(2deg) translateY(-8px);
+  box-shadow:
+    0 0 40px rgba(245, 158, 11, 0.7),
+    0 0 80px rgba(245, 158, 11, 0.4);
 }
 
 /* ---- Logo glow text ---- */
@@ -176,7 +333,7 @@ body {
 }
 .btn-primary:hover {
   background: #6d28d9;
-  box-shadow: 0 0 24px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 28px rgba(124, 58, 237, 0.6);
   transform: translateY(-2px);
 }
 
@@ -186,11 +343,11 @@ body {
 }
 .btn-outline:hover {
   background: rgba(124, 58, 237, 0.12);
-  box-shadow: 0 0 16px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
   transform: translateY(-2px);
 }
 
-/* ---- Shimmer line used in section headings ---- */
+/* ---- Shimmer gradient text ---- */
 .heading-shimmer {
   background: linear-gradient(
     90deg,
@@ -203,4 +360,117 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 4s linear infinite;
+}
+
+/* Purple → white → purple shimmer for the AniMyst logo */
+.logo-shimmer {
+  background: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #a78bfa 25%,
+    #ffffff 50%,
+    #a78bfa 75%,
+    #7c3aed 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Gold shimmer for step numbers */
+.step-number-gold {
+  background: linear-gradient(
+    90deg,
+    #f59e0b 0%,
+    #fbbf24 30%,
+    #fef08a 50%,
+    #fbbf24 70%,
+    #f59e0b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 3s linear infinite;
+}
+
+/* ---- Glassmorphism card base ---- */
+.glass-card {
+  background: rgba(17, 12, 34, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+/* ---- Glowing divider line ---- */
+.glow-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #7c3aed 25%,
+    #a78bfa 50%,
+    #7c3aed 75%,
+    transparent 100%
+  );
+  background-size: 200% auto;
+  animation: glow-line 3s linear infinite;
+  border: none;
+  margin: 0;
+}
+
+/* ---- Step connector lines ---- */
+.step-connector {
+  position: relative;
+}
+
+/* Horizontal connecting line on desktop */
+@media (min-width: 768px) {
+  .step-connector:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: -16px;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, #7c3aed, transparent);
+    pointer-events: none;
+  }
+}
+
+/* Vertical connecting line on mobile */
+@media (max-width: 767px) {
+  .step-connector:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 32px;
+    width: 2px;
+    height: 32px;
+    background: linear-gradient(180deg, #7c3aed, transparent);
+    pointer-events: none;
+  }
+}
+
+/* ---- CTA Banner ---- */
+.cta-banner {
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  box-shadow:
+    0 0 40px rgba(124, 58, 237, 0.1),
+    0 0 80px rgba(124, 58, 237, 0.05);
+}
+
+/* ---- Marquee container — hide overflow ---- */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
 }
