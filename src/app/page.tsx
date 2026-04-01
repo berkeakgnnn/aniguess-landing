@@ -279,14 +279,14 @@ function FeaturesSection(): React.ReactElement {
           />
           <FeatureCard
             icon={<IconGrid />}
-            title="22 Anime Modes"
-            description="From Naruto to Demon Slayer. Test your knowledge across 22 series — or go all-in with All mode."
+            title="30 Anime Modes"
+            description="From Naruto to Demon Slayer. Test your knowledge across 30 series — or go all-in with All mode."
             delay="delay-200"
           />
           <FeatureCard
             icon={<IconSparkles />}
             title="Card Collection"
-            description="Open packs, collect 440 cards across 3 rarity tiers with cinematic pack-opening animations. Gotta catch &apos;em all."
+            description="Open packs, collect 600 cards across 3 rarity tiers with cinematic pack-opening animations. Gotta catch &apos;em all."
             delay="delay-300"
           />
         </div>
@@ -355,7 +355,7 @@ function HowItWorksSection(): React.ReactElement {
           <Step
             number="1"
             title="Choose Your Mode"
-            description="Pick from 22 anime series or try All mode for the ultimate challenge. Daily Challenge awaits every morning."
+            description="Pick from 30 anime series or try All mode for the ultimate challenge. Daily Challenge awaits every morning."
             delay="delay-100"
           />
           <Step
@@ -481,7 +481,7 @@ function CardCollectionSection(): React.ReactElement {
             style={{ color: "#64748b" }}
           >
             Open packs with cinematic animations and discover characters across
-            440 collectible cards. Every pull brings you closer to that elusive
+            600 collectible cards. Every pull brings you closer to that elusive
             Legendary.
           </p>
         </div>
@@ -490,7 +490,7 @@ function CardCollectionSection(): React.ReactElement {
           <RarityCard
             rarity="COMMON"
             label="Common"
-            description="Fan favourites from every series. Build your base collection with 220+ common cards."
+            description="Fan favourites from every series. Build your base collection with 360+ common cards."
             delay="delay-100"
           />
           <RarityCard
@@ -557,8 +557,8 @@ function StatsSection(): React.ReactElement {
         </div>
 
         <div className="grid grid-cols-3 gap-8 text-center md:gap-16">
-          <StatItem value="22" label="Anime Series" delay="delay-100" />
-          <StatItem value="440+" label="Characters" delay="delay-200" />
+          <StatItem value="30" label="Anime Series" delay="delay-100" />
+          <StatItem value="600+" label="Characters" delay="delay-200" />
           <StatItem value="3" label="Rarity Tiers" delay="delay-300" />
         </div>
       </div>

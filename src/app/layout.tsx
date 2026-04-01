@@ -13,7 +13,7 @@ const exo2 = Exo_2({
 export const metadata: Metadata = {
   title: "AniMyst — Anime Character Guessing Game",
   description:
-    "Guess anime characters from blurred images across 22 series. Collect 440 cards, open packs, and challenge yourself daily. Available on iOS.",
+    "Guess anime characters from blurred images across 30 series. Collect 600 cards, open packs, and challenge yourself daily. Available on iOS.",
   keywords: [
     "anime",
     "guessing game",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AniMyst — Anime Character Guessing Game",
     description:
-      "Guess anime characters from blurred images across 22 series. Collect 440 cards, open packs, and challenge yourself daily.",
+      "Guess anime characters from blurred images across 30 series. Collect 600 cards, open packs, and challenge yourself daily.",
     type: "website",
     locale: "en_US",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AniMyst — Anime Character Guessing Game",
     description:
-      "Guess anime characters from blurred images across 22 series. Collect 440 cards and challenge yourself daily.",
+      "Guess anime characters from blurred images across 30 series. Collect 600 cards and challenge yourself daily.",
   },
 };
 

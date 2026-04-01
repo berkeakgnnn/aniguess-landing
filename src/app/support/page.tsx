@@ -41,7 +41,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Which anime series are included?",
     answer:
-      "AniMyst currently features 22 anime series including Naruto, Demon Slayer, Dragon Ball Z, One Piece, Attack on Titan, My Hero Academia, Bleach, Death Note, Fullmetal Alchemist, Hunter x Hunter, Tokyo Ghoul, Sword Art Online, Re:Zero, Jujutsu Kaisen, Black Clover, Chainsaw Man, Spy x Family, Vinland Saga, Mob Psycho 100, Blue Exorcist, Overlord, and No Game No Life. More series will be added in future updates.",
+      "AniMyst currently features 30 anime series including Naruto, One Piece, Demon Slayer, Attack on Titan, Jujutsu Kaisen, My Hero Academia, Bleach, Death Note, Fullmetal Alchemist, Hunter x Hunter, Tokyo Ghoul, Sword Art Online, Re:Zero, Black Clover, Chainsaw Man, Solo Leveling, Pokémon, Blue Lock, Fairy Tail, Gintama, Kuroko's Basketball, One Punch Man, Haikyuu, Vinland Saga, Frieren, Mob Psycho 100, Code Geass, Spy x Family, Oshi no Ko, and Dandadan. More series will be added in future updates.",
   },
 ];
 
