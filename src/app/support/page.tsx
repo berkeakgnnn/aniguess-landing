@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Get help with AniMyst — Anime Character Guessing Game",
 };
 
-const CONTACT_EMAIL = "support@animyst.app";
+const CONTACT_EMAIL = "vexloftstudio@gmail.com";
 
 interface FaqItem {
   question: string;

@@ -194,7 +194,7 @@ function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
         <p className="logo-shimmer text-2xl font-black tracking-tight">AniMyst</p>
         <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer">
-          {[{ href: "/privacy", label: "Privacy Policy" }, { href: "/terms", label: "Terms" }, { href: "/support", label: "Support" }, { href: "mailto:support@animyst.app", label: "Contact" }].map((l) => (
+          {[{ href: "/privacy", label: "Privacy Policy" }, { href: "/terms", label: "Terms" }, { href: "/support", label: "Support" }, { href: "mailto:vexloftstudio@gmail.com", label: "Contact" }].map((l) => (
             <a key={l.href} href={l.href} className="text-sm transition-colors hover:text-[#a78bfa]" style={{ color: "#64748b" }}>{l.label}</a>
           ))}
         </nav>

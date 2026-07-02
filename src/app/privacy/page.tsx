@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const LAST_UPDATED = "March 31, 2026";
-const CONTACT_EMAIL = "support@animyst.app";
+const CONTACT_EMAIL = "vexloftstudio@gmail.com";
 
 // Shared prose block for policy sections
 function PolicySection({
