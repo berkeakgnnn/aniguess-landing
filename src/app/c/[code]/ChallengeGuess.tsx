@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Not published yet — point to a placeholder until the App Store id exists.
-const APP_STORE_URL = "https://apps.apple.com/app/animyst";
+const APP_STORE_URL = "https://apps.apple.com/app/id6786710063";
 const APP_DEEP_LINK = "animyst://";
 
 interface Props {

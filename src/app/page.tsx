@@ -26,7 +26,7 @@ function HeroSection() {
           <span className="typing-cursor" />
         </div>
         <div className="animate-fade-up delay-300 mt-4 flex flex-wrap items-center justify-center gap-4">
-          <a href="#" className="btn-primary flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base font-bold text-white"><IconApple /> Download on App Store</a>
+          <a href="https://apps.apple.com/app/id6786710063" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base font-bold text-white"><IconApple /> Download on App Store</a>
           <a href="#features" className="btn-outline flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base font-bold text-white">Explore</a>
         </div>
         <p className="animate-fade-up delay-400 mt-1 text-xs" style={{ color: "#475569" }}>iOS &middot; Free to play &middot; 30 anime series</p>
@@ -180,7 +180,7 @@ function CTABanner() {
         <div className="mx-auto max-w-3xl rounded-3xl p-12 text-center" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.15) 0%, transparent 60%), #110c22", border: "1px solid rgba(124,58,237,0.25)" }}>
           <h2 className="text-3xl font-black text-[#f1f5f9] md:text-4xl">Ready to test your anime knowledge?</h2>
           <p className="mt-3 text-base" style={{ color: "#94a3b8" }}>Join thousands of anime fans. It&apos;s free.</p>
-          <a href="#" className="btn-primary mt-8 inline-flex items-center gap-2 rounded-2xl px-10 py-4 text-lg font-bold text-white"><IconApple /> Download Now</a>
+          <a href="https://apps.apple.com/app/id6786710063" target="_blank" rel="noopener noreferrer" className="btn-primary mt-8 inline-flex items-center gap-2 rounded-2xl px-10 py-4 text-lg font-bold text-white"><IconApple /> Download Now</a>
           <p className="mt-3 text-xs" style={{ color: "#475569" }}>Free on the App Store</p>
         </div>
       </FadeInSection>
