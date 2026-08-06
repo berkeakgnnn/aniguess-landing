@@ -1,7 +1,7 @@
 // src/lib/challengeLink.ts — MUST stay in sync with the app's lib/challengeLink.ts.
 // Decodes the stateless viral challenge payload embedded in /c/<code> URLs.
 
-export const CHALLENGE_BASE_URL = "https://animyst.vercel.app";
+export const CHALLENGE_BASE_URL = "https://animyst.vexloft.com";
 
 export type ChallengeType = "challenge" | "result";
 

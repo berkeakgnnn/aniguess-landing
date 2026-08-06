@@ -8,9 +8,13 @@ export const contentType = "image/png";
 export const alt = "AniMyst challenge — can you guess this anime?";
 
 // OG image shown in WhatsApp/IG/Twitter link previews.
-// Satori (the ImageResponse engine) does not reliably support CSS blur, so the
-// character is obscured with heavy dark overlays + a large "?" — guaranteeing
-// the answer is never revealed in the preview.
+//
+// Satori (the ImageResponse engine) supports neither CSS blur nor opacity on
+// <img> reliably — an earlier version set opacity 0.18 on the character and it
+// rendered at full strength, which handed the answer to anyone reading the
+// preview. The character is therefore covered by an opaque scrim drawn on top
+// of it; only a faint silhouette survives, which Satori does honour because it
+// is a plain background-color on a div.
 export default async function Image({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
   const payload = decodeChallengeCode(code);
@@ -48,7 +52,21 @@ export default async function Image({ params }: { params: Promise<{ code: string
             }}
           />
         )}
-        {/* Dark scrim to further obscure the character */}
+        {/* Opaque cover directly over the character. This is what actually
+            hides the answer — the img opacity above is not honoured by Satori. */}
+        {character && (
+          <div
+            style={{
+              position: "absolute",
+              right: 60,
+              top: 0,
+              width: 480,
+              height: 630,
+              background: "rgba(13,8,32,0.965)",
+            }}
+          />
+        )}
+        {/* Mood wash over the whole card */}
         <div
           style={{
             position: "absolute",
@@ -67,7 +85,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
           }}
         >
           <div style={{ display: "flex", fontSize: 34, color: "#a78bfa", fontWeight: 900, letterSpacing: 6 }}>
-            ✦ ANIMYST
+            ANIMYST
           </div>
           <div style={{ display: "flex", fontSize: 96, color: "#ffffff", fontWeight: 900, lineHeight: 1 }}>
             Can you
@@ -76,7 +94,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
             guess this?
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#94a3b8", fontWeight: 700 }}>
-            A friend challenged you · animyst.vercel.app
+            A friend challenged you · animyst.vexloft.com
           </div>
         </div>
         <div
