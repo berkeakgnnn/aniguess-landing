@@ -27,6 +27,27 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* Tam ekran dikey deste. Kaydırıcı html olduğu için framer-motion'ın
+     whileInView'i ekstra root ayarı olmadan çalışıyor. */
+  scroll-snap-type: y mandatory;
+}
+
+/* `always`, momentum kaydırmada bölüm atlanmasını engelliyor — Swiper'ın
+   "tek hareket = tek sayfa" davranışının native karşılığı. */
+.deck-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Hareket kısıtlaması olanlarda deste normal bir sayfaya dönüşür. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .deck-slide {
+    scroll-snap-stop: normal;
+  }
 }
 
 body {
