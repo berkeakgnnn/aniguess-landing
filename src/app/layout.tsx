@@ -11,6 +11,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://animyst.vexloft.com"),
   title: "AniMyst — Anime Character Guessing Game",
   description:
     "Guess anime characters from blurred images across 30 series. Collect 600 cards, open packs, and challenge yourself daily. Available on iOS.",
@@ -28,12 +29,16 @@ export const metadata: Metadata = {
       "Guess anime characters from blurred images across 30 series. Collect 600 cards, open packs, and challenge yourself daily.",
     type: "website",
     locale: "en_US",
+    url: "/",
+    siteName: "AniMyst",
+    images: [{ url: "/hero/poster.jpg", width: 1600, height: 894, alt: "AniMyst" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AniMyst — Anime Character Guessing Game",
     description:
       "Guess anime characters from blurred images across 30 series. Collect 600 cards and challenge yourself daily.",
+    images: ["/hero/poster.jpg"],
   },
 };
 
