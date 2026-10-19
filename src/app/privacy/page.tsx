@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Privacy Policy for AniMyst — Anime Character Guessing Game",
 };
 
-const LAST_UPDATED = "March 31, 2026";
+const LAST_UPDATED = "October 19, 2026";
 const CONTACT_EMAIL = "vexloftstudio@gmail.com";
 
 // Shared prose block for policy sections
@@ -186,6 +186,15 @@ export default function PrivacyPage(): React.ReactElement {
             </p>
           </PolicySection>
 
+          <PolicySection title="Website Analytics (Umami)">
+            <p>
+              This website counts visits with Umami, running on our own server. It
+              records the page opened, the referring site, country, and device type.
+              It does not use cookies and does not store your IP address. This applies
+              to the website only, not the App.
+            </p>
+          </PolicySection>
+
           <PolicySection title="App Tracking Transparency (iOS)">
             <p>
               In compliance with Apple&apos;s App Tracking Transparency (ATT) framework,
@@ -238,7 +247,9 @@ export default function PrivacyPage(): React.ReactElement {
               Sürüm 1.2.7 itibarıyla uygulama kullanımına ilişkin anonim ürün analitiği
               (ekran görüntülemeleri ve oyun içi olaylar) PostHog aracılığıyla
               işlenmektedir; bu veriler ad, e-posta veya iletişim bilgisi içermez ve
-              reklam amacıyla kullanılmaz.
+              reklam amacıyla kullanılmaz. Bu web sitesinde ziyaret sayısı, açılan
+              sayfa, gelinen site, ülke ve cihaz türünü kendi sunucumuzdaki Umami ile
+              sayarız. Çerez kullanılmaz, IP adresin saklanmaz.
             </p>
             <p>
               KVKK kapsamındaki haklarınızı kullanmak için{" "}

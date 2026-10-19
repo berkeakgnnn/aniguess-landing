@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 // Exo 2 is not a variable font, so weights must be explicitly listed
@@ -54,6 +55,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#0d0820] text-[#f1f5f9]">
         {children}
+        {/* Cookieless visit counting on Vexloft's own Umami server. */}
+        <Script
+          src="https://analiz.vexloft.com/script.js"
+          data-website-id="4769df00-5f1b-4ca1-9e42-ec9eba0293c8"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
