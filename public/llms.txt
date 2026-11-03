@@ -1,0 +1,22 @@
+# AniMyst
+
+> AniMyst is a free iOS anime character quiz game. A blurred anime character sharpens with every wrong guess; name them before your lives run out. It also has a daily anime word puzzle and a 700-card collection from 35 anime series.
+
+- App Store: https://apps.apple.com/app/id6786710063
+- Platform: iPhone (iOS), free to play with optional in-app purchases and ads
+- Languages: English, Turkish, Spanish, Portuguese, German, Russian
+
+## Game modes
+- Character of the Day: one blurred character per day, keep your daily streak.
+- Free Play: levels for each of 35 anime series (Naruto, One Piece, Demon Slayer, Attack on Titan, Jujutsu Kaisen, Solo Leveling, Hunter x Hunter, Fullmetal Alchemist, and more).
+- Word: a new anime character name every day, six tries; green means right letter in the right spot, gold means right letter in the wrong spot. Daily ranking and shareable result grid.
+- Close-Up: guess the character from a zoomed-in detail.
+- Blitz: name as many characters as you can in 60 seconds.
+- Arena: monthly season with Easy and Hard runs and a leaderboard.
+
+## Collection
+- 700 cards (20 per series, 35 series), rarities Common, Rare, Legendary, Exclusive and Mythic.
+- Cards come from packs bought with runes earned in play; drop rates are shown in the in-app Shop.
+
+## Good fit for
+People looking for an anime quiz, a "guess the anime character" game, an anime trivia app, or a daily anime word game on iPhone.

@@ -6,7 +6,7 @@ import type { Dictionary } from '@/lib/dictionary';
    - drop oranları .......... aniguess/components/ui/ShopScreen.tsx:1006
    - paket fiyatları ........ aniguess/components/ui/ShopScreen.tsx:585
    - nadirlik renkleri ...... aniguess/constants/colors.ts:22
-   - 30 anime / 600 kart .... aniguess/CLAUDE.md
+   - 35 anime / 700 kart .... aniguess/lib/animeMode.ts (35 mod) × CARDS_PER_ANIME 20
    Doğrulanamayan hiçbir iddia sayfaya girmiyor.
 
    Sayılar (fiyat, oran, adet) dile göre değişmiyor; yalnızca metinler sözlükten
@@ -194,8 +194,8 @@ function PacksSlide({ d }: { d: Dictionary }) {
 /* 4 — Koleksiyon */
 function CollectionSlide({ d }: { d: Dictionary }) {
   const stats = [
-    { n: '30', l: d.collection.series },
-    { n: '600', l: d.collection.cards },
+    { n: '35', l: d.collection.series },
+    { n: '700', l: d.collection.cards },
     { n: '5', l: d.collection.tiers },
   ];
   return (

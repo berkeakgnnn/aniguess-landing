@@ -59,14 +59,14 @@ const en: Dictionary = {
   meta: {
     title: 'AniMyst — Anime Character Guessing Game',
     description:
-      'Guess anime characters from blurred images across 30 series. Collect 600 cards, open packs, and challenge yourself daily. Available on iOS.',
+      'Guess anime characters from blurred images across 35 series, solve a new anime word puzzle every day, and collect 700 cards. Free on iOS.',
   },
   nav: { switchTo: 'Türkçe', switchHref: '/tr' },
   cta: { download: 'Download on the App Store', tryFree: 'Try it free' },
   hero: {
     title: 'Can you name the character?',
-    lede: 'Guess anime characters from a blur. Open packs. Collect 600 cards.',
-    meta: 'iOS · Free to play · 30 anime series',
+    lede: 'Guess anime characters from a blur. Solve the daily anime word. Collect 700 cards.',
+    meta: 'iOS · Free to play · 35 anime series',
   },
   mechanic: {
     kicker: 'The game',
@@ -89,7 +89,7 @@ const en: Dictionary = {
   },
   collection: {
     kicker: 'Collection',
-    title: '600 cards. 30 anime.',
+    title: '700 cards. 35 anime.',
     lede:
       'Twenty cards per series, five rarity tiers, one collection. Duplicates convert back into runes, so no pull is wasted.',
     series: 'Anime series',
@@ -100,7 +100,7 @@ const en: Dictionary = {
     kicker: 'Compete',
     title: 'Climb the ranks',
     lede:
-      'A new Daily Challenge every day. Keep your streak alive, earn XP, and push up the weekly and all-time leaderboards.',
+      'A new Character of the Day and a new anime word puzzle every day: six tries, green for the right spot, gold for the wrong one. Keep your streak alive, earn XP, and climb the daily and all-time leaderboards.',
   },
   closing: {
     title: 'Ready to test your anime knowledge?',
@@ -120,14 +120,14 @@ const tr: Dictionary = {
   meta: {
     title: 'AniMyst — Anime Karakter Tahmin Oyunu',
     description:
-      '30 anime serisinden bulanık görsellerle karakterleri tahmin et. 600 kart topla, paket aç, her gün kendini dene. iOS için ücretsiz.',
+      '35 anime serisinden bulanık görsellerle karakterleri tahmin et, her gün yeni anime kelime bulmacasını çöz, 700 kart topla. iOS için ücretsiz.',
   },
   nav: { switchTo: 'English', switchHref: '/' },
   cta: { download: "App Store'dan indir", tryFree: 'Ücretsiz dene' },
   hero: {
     title: 'Karakteri tanıyabilecek misin?',
-    lede: 'Bulanıklıktan anime karakterlerini bil. Paket aç. 600 kart topla.',
-    meta: 'iOS · Ücretsiz · 30 anime serisi',
+    lede: 'Bulanıklıktan anime karakterlerini bil. Günün anime kelimesini çöz. 700 kart topla.',
+    meta: 'iOS · Ücretsiz · 35 anime serisi',
   },
   mechanic: {
     kicker: 'Oyun',
@@ -150,7 +150,7 @@ const tr: Dictionary = {
   },
   collection: {
     kicker: 'Koleksiyon',
-    title: '600 kart. 30 anime.',
+    title: '700 kart. 35 anime.',
     lede:
       'Seri başına yirmi kart, beş nadirlik seviyesi, tek koleksiyon. Çift çıkan kartlar rune olarak geri döner, hiçbir açılım boşa gitmez.',
     series: 'Anime serisi',
@@ -161,7 +161,7 @@ const tr: Dictionary = {
     kicker: 'Rekabet',
     title: 'Rütbeleri tırman',
     lede:
-      'Her gün yeni bir Günlük Meydan Okuma. Serini kırma, XP kazan, haftalık ve tüm zamanlar sıralamasında yüksel.',
+      'Her gün yeni bir Günün Karakteri ve yeni bir anime kelime bulmacası: altı deneme, yeşil doğru yer, altın yanlış yer. Serini kırma, XP kazan, günlük ve tüm zamanlar sıralamasında yüksel.',
   },
   closing: {
     title: 'Anime bilgini test etmeye hazır mısın?',
